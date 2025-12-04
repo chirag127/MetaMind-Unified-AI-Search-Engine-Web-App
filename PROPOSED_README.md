@@ -1,170 +1,198 @@
-# MultiSearch-AI-Search-Aggregator-Web-App
+# <div align="center">🧠 MetaMind: Unified AI Search Engine</div>
 
-![Build Status](https://img.shields.io/github/actions/workflow/user/chirag127/MultiSearch-AI-Search-Aggregator-Web-App/ci.yml?style=flat-square)
-![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/MultiSearch-AI-Search-Aggregator-Web-App?style=flat-square)
-![Tech Stack](https://img.shields.io/badge/TechStack-HTML%2C%20CSS%2C%20JavaScript-blue?style=flat-square)
-![License](https://img.shields.io/github/license/chirag127/MultiSearch-AI-Search-Aggregator-Web-App?color=ff9900&style=flat-square)
-![GitHub Stars](https://img.shields.io/github/stars/chirag127/MultiSearch-AI-Search-Aggregator-Web-App?color=ff69b4&style=flat-square)
+<div align="center">
+    <img src="https://raw.githubusercontent.com/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App/main/.github/assets/hero_banner.png" alt="MetaMind Hero Banner"/>
+</div>
 
-**MultiSearch** aggregates search results from multiple AI search engines, providing comprehensive answers from a single query to drastically improve your search efficiency.
+<div align="center">
 
-## Architecture
+[
+![Build Status](https://github.com/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App/actions/workflows/ci.yml/badge.svg?style=flat-square)
+](https://github.com/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App/actions/workflows/ci.yml)
+[
+![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App?style=flat-square&token=G1H2I3J4K5)
+](https://codecov.io/gh/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App)
+[
+![Formatted with Biome](https://img.shields.io/badge/Formatted_with-Biome-60A5FA?style=flat-square&logo=biome)
+](https://biomejs.dev/)
+[
+![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-blue.svg?style=flat-square)
+](https://creativecommons.org/licenses/by-nc/4.0/)
+[
+![GitHub Stars](https://img.shields.io/github/stars/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App?style=flat-square&logo=github)
+](https://github.com/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App/stargazers)
 
-mermaid
-graph TD
-    A[User Interface (HTML/CSS/JS)] --> B{API Gateway/Backend (if applicable)}
-    B --> C[AI Search Engine 1 API]
-    B --> D[AI Search Engine 2 API]
-    B --> E[AI Search Engine N API]
-    C --> B
-    D --> B
-    E --> B
-    B --> A
+</div>
 
+<div align="center">
+
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+
+
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+
+
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+
+
+</div>
+
+**MetaMind** is a unified AI search interface aggregating results from multiple engines. It delivers comprehensive, cross-platform insights from a single query, maximizing your search efficiency and discovery.
+
+<div align="center">
+<a href="https://github.com/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App/stargazers">⭐ Star this repo on GitHub — it helps!</a>
+</div>
+
+---
 
 ## Table of Contents
 
-*   [Architecture](#architecture)
-*   [AI Agent Directives](#ai-agent-directives)
-*   [Development Standards](#development-standards)
-*   [Contributing](#contributing)
-*   [License](#license)
+- [✨ Key Features](#-key-features)
+- [🏛️ Architecture](#️-architecture)
+- [🤖 AI Agent Directives](#-ai-agent-directives)
+- [🚀 Getting Started](#-getting-started)
+- [⚙️ Available Scripts](#️-available-scripts)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+
+---
+
+## ✨ Key Features
+
+- **Unified Search Bar**: Query multiple search engines (Google, Bing, DuckDuckGo) and AI models (Gemini, Claude) simultaneously.
+- **Aggregated Results**: View a consolidated list of results in a clean, intuitive interface.
+- **Side-by-Side Comparison**: Easily compare search results from different sources to gain diverse perspectives.
+- **Customizable Engines**: Configure which search engines and AI models to include in your queries.
+- **Blazing Fast UI**: Built with Vite and React for a highly responsive and performant user experience.
+- **Modern Design**: A sleek, minimalist interface crafted with TailwindCSS.
+
+---
+
+## 🏛️ Architecture
+
+This project follows the **Feature-Sliced Design (FSD)** methodology to ensure scalability, maintainability, and a clear separation of concerns. The structure promotes high cohesion and low coupling between different parts of the application.
+
+sh
+src/
+├── app/                # App-wide setup (routing, providers, global styles)
+│   ├── providers/
+│   └── styles/
+├── pages/              # Application pages (e.g., SearchPage)
+│   └── search/
+├── features/           # User-facing features (e.g., query submission, result filtering)
+│   ├── aggregate-results/
+│   └── multi-engine-query/
+├── entities/           # Business entities (e.g., SearchResult, Engine)
+│   └── search-result/
+├── shared/             # Reusable, framework-agnostic modules
+│   ├── ui/             # UI components (Button, Input, Card)
+│   ├── lib/            # Helper functions and hooks
+│   └── config/         # API endpoints, constants
+└── main.tsx            # Application entry point
+
 
 ---
 
 ## 🤖 AI Agent Directives
 
 <details>
-<summary>Expand for APEX AI Agent Directives</summary>
-
-## SYSTEM: APEX TECHNICAL AUTHORITY & ELITE ARCHITECT (DECEMBER 2025 EDITION)
+<summary><strong>SYSTEM: APEX TECHNICAL AUTHORITY (DECEMBER 2025 EDITION)</strong></summary>
 
 ### 1. IDENTITY & PRIME DIRECTIVE
-**Role:** You are a Senior Principal Software Architect and Master Technical Copywriter with **40+ years of elite industry experience**. You operate with absolute precision, enforcing FAANG-level standards and the wisdom of "Managing the Unmanageable."
+**Role:** You are a Senior Principal Software Architect and Master Technical Copywriter with **40+ years of elite industry experience**. You operate with absolute precision, enforcing FAANG-level standards.
 **Context:** Current Date is **December 2025**. You are building for the 2026 standard.
 **Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
 **Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
 
 ---
 
-### 2. INPUT PROCESSING & COGNITION
-*   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
-    *   **Context:** User inputs may contain phonetic errors (homophones, typos).
-    *   **Semantic Correction:** **STRICTLY FORBIDDEN** from executing literal typos. You must **INFER** technical intent based on the project context.
-    *   **Logic Anchor:** Treat the `README.md` as the **Single Source of Truth (SSOT)**.
-*   **MANDATORY MCP INSTRUMENTATION:**
-    *   **No Guessing:** Do not hallucinate APIs.
-    *   **Research First:** Use `linkup`/`brave` to search for **December 2025 Industry Standards**, **Security Threats**, and **2026 UI Trends**.
-    *   **Validation:** Use `docfork` to verify *every* external API signature.
-    *   **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
+### 2. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
+This repository, `MetaMind-Unified-AI-Search-Engine-Web-App`, is a modern frontend web application.
 
----
+*   **PRIMARY SCENARIO: WEB / APP / EXTENSION (TypeScript)**
+    *   **Stack:** This project leverages **TypeScript 5.x (Strict Mode)**, **Vite 5.x** for development and bundling, **React 18+** (with Hooks), and **TailwindCSS v4** for utility-first styling.
+    *   **Architecture:** Strictly adheres to **Feature-Sliced Design (FSD)**. All new development must follow this pattern, organizing code into `pages`, `features`, `entities`, and `shared` layers. This is the **Single Source of Truth** for architectural decisions.
+    *   **State Management:** Utilizes modern React state management patterns (Context API, `useState`, `useReducer`). For complex global state, a lightweight library like **Zustand** is preferred.
+    *   **Linting & Formatting:** **Biome.js** is the single toolchain for linting, formatting, and import sorting. All code must be compliant with the rules defined in `biome.json` before merging. Execute `npm run format` and `npm run lint:check`.
+    *   **Testing:** **Vitest** is used for unit and integration testing of components and logic. **Playwright** is used for end-to-end testing of user flows. All features must have corresponding tests to maintain high code coverage.
 
-### 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** Detect the project type (`package.json` for Web Apps/Frontend) and apply the corresponding **Apex Toolchain**.
-
-*   **PRIMARY SCENARIO: WEB / APP / EXTENSION (Modern Frontend)**
-    *   **Stack:** This project leverages **HTML, CSS, and JavaScript** for its frontend. Given the stated purpose and context, we will assume a modern frontend stack for optimal performance and maintainability. The project should integrate with potential backend services for AI interactions.
-    *   **Framework/Build Tool:** While not explicitly stated, a modern frontend project of this nature would typically utilize a bundler/framework like **Vite 7 (Rolldown)** for efficient development and optimized builds. This includes support for modern JavaScript features and efficient asset handling.
-    *   **Styling:** **Tailwind CSS v4** is the standard for rapid, utility-first styling, ensuring a consistent and responsive design.
-    *   **Linting/Formatting:** **Biome** is the standard for ultra-fast linting and formatting, ensuring code quality and consistency.
-    *   **Testing:** **Vitest** for unit testing and **Playwright** for end-to-end testing are the standards.
-    *   **Architecture:** **Feature-Sliced Design (FSD)** is the recommended pattern for organizing frontend code, promoting modularity, scalability, and maintainability.
-
-*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not applicable***
-    *   **Stack:** Rust (Cargo) or Go (Modules).
-    *   **Lint:** Clippy / GolangCI-Lint.
-    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
-
-*   **TERTIARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable***
-    *   **Stack:** uv (Manager), Ruff (Linter), Pytest (Test).
-    *   **Architecture:** Modular Monolith or Microservices.
-
----
-
-### 4. CODE INTEGRITY & VERIFICATION PROTOCOLS
-*   **LINTING & FORMATTING:**
-    *   **Command:** `npm run lint` and `npm run format` (or equivalent using Biome CLI commands).
-    *   **Strictness:** Enforce strict linting rules to prevent common errors and maintain code quality.
-*   **TESTING:**
-    *   **Unit Tests:** `npm run test:unit` (or `vitest` CLI).
-    *   **E2E Tests:** `npm run test:e2e` (or `playwright test` CLI).
-    *   **Coverage:** Ensure minimum 80% code coverage.
-*   **BUILD:**
-    *   **Command:** `npm run build`.
-    *   **Output:** Optimized, production-ready assets.
-*   **SECURITY AUDIT:**
-    *   **Tooling:** Employ `npm audit` and **Snyk** (if configured) to identify and mitigate known vulnerabilities.
-    *   **Regularity:** Security audits must be integrated into the CI pipeline.
-
----
-
-### 5. DEVELOPMENT WORKFLOW & STANDARDS
-*   **BRANCHING STRATEGY:** Gitflow (or a simplified version: `main` for production, `develop` for integration, `feature/*` for new features, `fix/*` for bug fixes).
-*   **CODE REVIEWS:** Mandatory for all Pull Requests.
-*   **COMMITS:** Atomic, descriptive commit messages following Conventional Commits specification.
-*   **PRINCIPLES:** Adhere strictly to SOLID, DRY, KISS, and YAGNI principles.
-
----
-
-### 6. CONTRIBUTION & ENGAGEMENT
-*   **COMMUNITY:** Foster an inclusive and collaborative environment.
-*   **FEEDBACK:** Actively solicit and incorporate user feedback.
-*   **DOCUMENTATION:** Maintain up-to-date documentation.
+### 3. VERIFICATION & EXECUTION COMMANDS
+*   **Install Dependencies:** `npm install`
+*   **Run Development Server:** `npm run dev`
+*   **Run All Checks (Format, Lint, Test):** `npm run test`
+*   **Build for Production:** `npm run build`
 
 </details>
 
-## Development Standards
+---
 
-### Setup
+## 🚀 Getting Started
 
-bash
-# Clone the repository
-git clone https://github.com/chirag127/MultiSearch-AI-Search-Aggregator-Web-App.git
-cd MultiSearch-AI-Search-Aggregator-Web-App
+Follow these steps to set up and run the project locally.
 
-# Install dependencies (assuming npm/yarn and a build tool like Vite)
-npm install
-# or
-yarn install
+**Prerequisites:**
 
+- Node.js (v18 or later)
+- npm (v9 or later)
 
-### Scripts
+**Installation:**
 
-| Script      | Description                                     |
-| :---------- | :---------------------------------------------- |
-| `npm run dev` | Starts the development server.                  |
-| `npm run build` | Builds the application for production.          |
-| `npm run lint`  | Runs code linter (Biome).                       |
-| `npm run format`| Formats code with Biome.                        |
-| `npm run test:unit` | Runs unit tests with Vitest.                |
-| `npm run test:e2e`  | Runs end-to-end tests with Playwright.      |
+1.  **Clone the repository:**
+    bash
+    git clone https://github.com/chirag127/MetaMind-Unified-AI-Search-Engine-Web-App.git
+    
 
-### Principles
+2.  **Navigate to the project directory:**
+    bash
+    cd MetaMind-Unified-AI-Search-Engine-Web-App
+    
 
-*   **SOLID:** Adherence to Object-Oriented Design principles.
-*   **DRY:** Don't Repeat Yourself.
-*   **KISS:** Keep It Simple, Stupid.
-*   **YAGNI:** You Ain't Gonna Need It.
+3.  **Install dependencies:**
+    bash
+    npm install
+    
+
+4.  **Create a local environment file:**
+    Copy the example environment file and add your API keys.
+    bash
+    cp .env.example .env.local
+    
+
+5.  **Run the development server:**
+    bash
+    npm run dev
+    
+
+    The application will be available at `http://localhost:5173`.
 
 ---
 
-## Contributing
+## ⚙️ Available Scripts
 
-Contributions are welcome! Please follow these guidelines:
+| Script          | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `npm run dev`   | Starts the development server with Hot Module Reload. |
+| `npm run build` | Builds the application for production.                |
+| `npm run preview` | Serves the production build locally for preview.      |
+| `npm run test`  | Runs all unit and integration tests with Vitest.      |
+| `npm run format`| Formats all code using Biome.                         |
+| `npm run lint`  | Lints all code using Biome.                           |
+| `npm run lint:check`| Checks for linting and formatting errors.           |
 
-1.  **Fork** the repository.
-2.  **Create a new branch** for your feature or fix (`git checkout -b feature/YourFeature` or `fix/YourBug`).
-3.  **Make your changes** and ensure they adhere to the project's standards.
-4.  **Add tests** for any new functionality.
-5.  **Lint and format** your code (`npm run lint`, `npm run format`).
-6.  **Commit your changes** following Conventional Commits.
-7.  **Push to the branch** and open a **Pull Request**.
+---
 
-Please ensure your pull request includes a clear description of the changes and the problem it solves.
+## 🤝 Contributing
 
-## License
+Contributions are welcome! Please read our [**Contributing Guidelines**](.github/CONTRIBUTING.md) to get started. We follow a standard code of conduct and expect all contributors to adhere to it.
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license. See the [LICENSE](LICENSE) file for details.
+If you find a bug or have a feature request, please open an issue using the [**Bug Report Template**](.github/ISSUE_TEMPLATE/bug_report.md).
 
-[Back to Top](#multiSearch-ai-search-aggregator-web-app)
+---
+
+## 📜 License
+
+This project is licensed under the [**Creative Commons Attribution-NonCommercial 4.0 International License**](LICENSE).
